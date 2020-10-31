@@ -6,6 +6,8 @@
     <title>Data Barang</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/navbar.css">
+
+    <script src="js/jquery.min.js"></script>
 </head>
 <body>
 
@@ -26,12 +28,13 @@
     </div>
 
     <div class="content">
-
         <div class="header-index">
             <h1>Data Barang</h1>
             <a href="tambah_data.php" class="btn-tambah">Tambah Data</a>
             <a href="ekspor.php" class="btn-ekspor">Ekspor Data</a>
         </div>
+
+        <input class="searchform" type="text" id="search" placeholder="Cari barang">
     
         <table class="fl-table">
             <thead>
@@ -42,7 +45,7 @@
                     <th>Opsi</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tampil">
                 <?php
                     include "koneksi.php";
                     $no = 1;
@@ -61,9 +64,25 @@
                 <?php } ?>
             </tbody>
         </table>
-
     </div>
-    
+
+    <script>
+        $(document).ready(function() {
+            $("#search").keyup(function() {
+                $.ajax({
+                    type: 'POST',
+                    url: 'search.php',
+                    data: {
+                        search: $(this).val()
+                    },
+                    cache: false,
+                    success: function(data) {
+                        $("#tampil").html(data);
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>

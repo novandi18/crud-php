@@ -11,9 +11,10 @@
     max-width: 100%;
     white-space: nowrap;
     background-color: white;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 50px;
     box-shadow: 1px 5px 7px 0px rgba(0,0,0,.1);
+    margin-bottom: 50px;
 }
 
 .fl-table td, .fl-table th {
@@ -165,7 +166,6 @@ form .form .name-field .size span {
 form .form .name-field .size input {
     padding: 10px;
     border-radius: 10px;
-    border: none;
     background: #fff;
     border: 1.5px solid #262626;
     outline: none;
@@ -207,4 +207,28 @@ form .form .name-field .size input:focus {
 
 .btn-delete:hover {
     background-color: rgb(216, 84, 70);
+}
+
+.searchform {
+    margin-left: 50px;
+    margin-top: 25px;
+    width: 50vw;
+    padding: 7px 10px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1.5px solid #262626;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.searchform:hover {
+    box-shadow: 1px 3px 1px 0px rgba(0,0,0,.2);
+    transform: translateY(-1px);
+    transition: all 0.2s;
+}
+
+.searchform:focus {
+    box-shadow: 1px 3px 1px 0px #262626;
+    transform: translateY(0);
+    transition: all 0.2s;
 }

@@ -43,7 +43,7 @@
                 <div class="name-field">
                     <div class="size">
                         <span>Nama Barang</span>
-                        <input type="text" name="nama_barang" placeholder="Masukkan nama barang...">
+                        <input type="text" name="nama_barang" class="border-invalid" placeholder="Masukkan nama barang...">
                     </div>
                     <div class="size">
                         <span>Jenis Barang</span>
